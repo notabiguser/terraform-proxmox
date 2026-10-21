@@ -27,7 +27,7 @@ resource "proxmox_virtual_environment_vm" "vm" {
   }
 
   network_device {
-    bridge = "vmbr0" # VM bridge
+    bridge = "vmbr0"
   }
 
   initialization {
@@ -45,6 +45,6 @@ resource "proxmox_virtual_environment_vm" "vm" {
   }
 
   operating_system {
-    type = "l26" # Linux
+    type = "l26"
   }
 }

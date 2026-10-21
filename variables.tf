@@ -28,8 +28,9 @@ variable "vms" {
     ip     = string
   }))
   default = {
-    gitlab = { cores = 4, memory = 8192, disk = 50, ip = "192.168.1.60/24" }
-    runner = { cores = 2, memory = 4096, disk = 30, ip = "192.168.1.61/24" }
-    test   = { cores = 2, memory = 2048, disk = 20, ip = "192.168.1.62/24" }
+    control-plane-1 = { role = "control_plane", cores = 2, memory = 4096, disk = 20, ip = "192.168.1.60/24" }
+    control-plane-2 = { role = "control_plane", cores = 2, memory = 4096, disk = 20, ip = "192.168.1.61/24" }
+    control-plane-3 = { role = "control_plane", cores = 2, memory = 4096, disk = 20, ip = "192.168.1.62/24" }
+    worker-1        = { role = "worker", cores = 2, memory = 8192, disk = 50, ip = "192.168.1.63/24" }
   }
 }
