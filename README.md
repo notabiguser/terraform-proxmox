@@ -2,6 +2,11 @@
 
 IaC for Proxmox VMs using Terraform
 
+### Requirements
+
+- Proxmox VE on ZFS
+- Proxmox CA (`/etc/pve/pve-root-ca.pem`) added to your system
+
 ### Add Terraform user and role
 
 Run on the Proxmox host:
@@ -19,7 +24,7 @@ pveum user token add terraform@pve provider --privsep 0
 cp terraform.tfvars.example terraform.tfvars
 ```
 
-Put the api token in `terraform.tfvars` as `terraform@pve!provider=<value>`
+Put the Proxmox URL, api token and SSH key in `terraform.tfvars`
 
 ```bash
 terraform init
