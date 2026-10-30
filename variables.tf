@@ -3,6 +3,24 @@ variable "proxmox_api_url" {
   description = "Proxmox API URL, e.g., https://proxmox.example.com:8006"
 }
 
+variable "node_name" {
+  type        = string
+  default     = "pve"
+  description = "Name of the Proxmox node where VMs will be created"
+}
+
+variable "datastore_id" {
+  type        = string
+  default     = "local-zfs"
+  description = "Name of the local ZFS storage pool where VMs will be created"
+}
+
+variable "gateway" {
+  type        = string
+  default     = "192.168.1.1"
+  description = "Gateway IP address for the VM network"
+}
+
 variable "proxmox_api_token" {
   type        = string
   sensitive   = true
