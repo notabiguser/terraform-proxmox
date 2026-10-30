@@ -11,7 +11,7 @@ variable "proxmox_api_token" {
 
 variable "ubuntu_image_url" {
   type        = string
-  default     = "https://cloud-images.ubuntu.com/resolute/current/resolute-server-cloudimg-amd64.img"
+  default     = "https://cloud-images.ubuntu.com/releases/resolute/release-20261016/ubuntu-26.04-server-cloudimg-amd64.img"
   description = "URL to the Ubuntu cloud image to be downloaded"
 }
 
