@@ -1,6 +1,10 @@
-# terraform-proxmox
+<h1 align="center">
+terraform-proxmox
+</h1>
 
-IaC for Proxmox VMs using Terraform
+<p align="center">
+IaC for Proxmox using Terraform
+<br>
 
 ### Requirements
 
